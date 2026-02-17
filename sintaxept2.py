@@ -53,3 +53,22 @@ print(f"Maior número = {max(numeros)}")
 print(f"Menor número = {min(numeros)}")
 print(f"Soma dos números = {sum(numeros)}")
 print(f"Quantidade do array (elementos) = {len(numeros)}")
+
+# Funções de manipulação de arrays
+numeros.insert(0,21)    # Adiciona o número 21 na posição 0 (índice, valor)
+print(numeros)
+numeros.remove(20)      # Remove o valor do array
+print(numeros)
+numeros.pop(0)          # Remove o número pelo índíce (nesse caso, o primeiro)
+print(numeros)
+print(f"Slicing = {numeros[1:5]}")  # Corta os números fora dos índicea, mostra os números do índice 1 até o último - 1 (array[indiceInicial:final - 1])
+
+# Percorrer a lista com o índice e valor
+for i, valor in enumerate(numeros):
+    print(f"índice: {i} | Valor: {valor}")
+
+# Criando funções
+def nomeFuncao(parametro):
+    print(parametro)
+
+nomeFuncao("Testando funções")

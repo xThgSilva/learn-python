@@ -29,4 +29,5 @@ else:
         print(f"Quantidade dos elementos do array = {len(numeros)}")
         print(f"Média do array = {sum(numeros) / len(numeros)}")
         print(f"Menor número do array = {min(numeros)}")
+        print(f"Maior número do array = {max(numeros)}")
     
