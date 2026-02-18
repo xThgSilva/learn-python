@@ -70,5 +70,13 @@ for i, valor in enumerate(numeros):
 # Criando funções
 def nomeFuncao(parametro):
     print(parametro)
+    # Pode retornar um valor, usando "return x"
 
 nomeFuncao("Testando funções")
+
+# Funções, porém com parâmetros com valor padrão
+def saudacao(nome, mensagem = "Olá"):     # O valor de mensagem será "Olá" caso não seja passado como parâmetro da função
+    return f"{mensagem}, {nome}"
+
+print(saudacao("Usuário"))
+print(saudacao("Usuário", "Teste"))
