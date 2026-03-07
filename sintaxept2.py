@@ -1,82 +1,86 @@
-# Condições if else
-idade = int(input("Informe sua idade: "))
+# If/else conditions
+age = int(input("Enter your age: "))
 
-if idade >= 18:
-    print("Acesso permitido.")
-else :
-    print("Acesso negado! é necessário ser maior de idade.")
-
-# Operadores lógicos - and | or | not (&& ; || ; !=)
-isHabilitado = True
-
-if idade >= 18 and isHabilitado:
-    print("Pode dirigir.")
+if age >= 18:
+    print("Access granted.")
 else:
-    print("Você não é maior de idade ou possui habilitação.")
+    print("Access denied! You must be of legal age.")
 
-# Estruturas de repetição
-contador = 1
+# Logical operators - and | or | not (&& ; || ; !=)
+hasDriverLicense = True
 
-while contador < 10:
-    print(f"Contagem: {contador}")
-    contador += 1
+if age >= 18 and hasDriverLicense:
+    print("You can drive.")
+else:
+    print("You are not of legal age or you don't have a driver's license.")
 
-# Por padrão, o valor do laço (i nesse caso) é 0
+# Loop structures
+counter = 1
+
+while counter < 10:
+    print(f"Count: {counter}")
+    counter += 1
+
+# By default, the loop variable (i in this case) starts at 0
 for i in range(5):
-    print(f"Valor do i atual do loop: {i}")
+    print(f"Current loop value of i: {i}")
 
-# Usando parâmetros, o range começa no primeiro (1) e acaba no anterior do ultimo (6 - 1)
+# Using parameters, range starts at the first (1) and ends before the last (6 - 1)
 for i in range(1, 6):
-    print(f"Valor atual do loop com parâmetros: {i}")
+    print(f"Current loop value with parameters: {i}")
 
-# Criando um array - ja é dinâmico
-produtos = ["celular", "notebook", "teclado", "mouse", "mousepad", "fonte", "fam"]
+# Creating an array (list) - already dynamic
+products = ["cellphone", "notebook", "keyboard", "mouse", "mousepad", "power_supply", "fan"]
 
-# Acessar um elemento do array - array[indice]
-print(produtos[1])  # notebook
+# Accessing an element of the array - array[index]
+print(products[1])  # notebook
 
-# Adicionando elementos no array
-produtos.append("macbook")
-print(produtos[7])
+# Adding elements to the array
+products.append("macbook")
+print(products[7])
 
-# Percorrendo o array
-for produto in produtos:
-    print(f"Nome do produto: {produto}")
+# Iterating through the array
+for product in products:
+    print(f"Product name: {product}")
 
-# Percorrendo o array e pegando o índice
-for i in range(len(produtos)):
-    print(f"{i + 1}º produto = {produtos[i]}")  # +1 para maior entendimento
+# Iterating through the array and getting the index
+for i in range(len(products)):
+    print(f"{i + 1}º product = {products[i]}")  # +1 for easier understanding
 
-# Funções de arrays
-numeros = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
-print(f"Maior número = {max(numeros)}")
-print(f"Menor número = {min(numeros)}")
-print(f"Soma dos números = {sum(numeros)}")
-print(f"Quantidade do array (elementos) = {len(numeros)}")
+# Array (list) functions
+numbers = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+print(f"Highest number = {max(numbers)}")
+print(f"Lowest number = {min(numbers)}")
+print(f"Sum of numbers = {sum(numbers)}")
+print(f"Array size (elements) = {len(numbers)}")
 
-# Funções de manipulação de arrays
-numeros.insert(0,21)    # Adiciona o número 21 na posição 0 (índice, valor)
-print(numeros)
-numeros.remove(20)      # Remove o valor do array
-print(numeros)
-numeros.pop(0)          # Remove o número pelo índíce (nesse caso, o primeiro)
-print(numeros)
-print(f"Slicing = {numeros[1:5]}")  # Corta os números fora dos índicea, mostra os números do índice 1 até o último - 1 (array[indiceInicial:final - 1])
+# Array (list) manipulation functions
+numbers.insert(0, 21)    # Adds number 21 at position 0 (index, value)
+print(numbers)
 
-# Percorrer a lista com o índice e valor
-for i, valor in enumerate(numeros):
-    print(f"índice: {i} | Valor: {valor}")
+numbers.remove(20)       # Removes the value from the array
+print(numbers)
 
-# Criando funções
-def nomeFuncao(parametro):
-    print(parametro)
-    # Pode retornar um valor, usando "return x"
+numbers.pop(0)           # Removes the number by index (in this case, the first)
+print(numbers)
 
-nomeFuncao("Testando funções")
+print(f"Slicing = {numbers[1:5]}")  
+# Cuts elements outside the indices, shows numbers from index 1 to final - 1
 
-# Funções, porém com parâmetros com valor padrão
-def saudacao(nome, mensagem = "Olá"):     # O valor de mensagem será "Olá" caso não seja passado como parâmetro da função
-    return f"{mensagem}, {nome}"
+# Iterating the list with index and value
+for i, value in enumerate(numbers):
+    print(f"Index: {i} | Value: {value}")
 
-print(saudacao("Usuário"))
-print(saudacao("Usuário", "Teste"))
+# Creating functions
+def function_name(parameter):
+    print(parameter)
+    # Can return a value using "return x"
+
+function_name("Testing functions")
+
+# Functions with default parameters
+def greeting(name, message="Hello"):  # message will be "Hello" if not passed
+    return f"{message}, {name}"
+
+print(greeting("User"))
+print(greeting("User", "Test"))
