@@ -6,7 +6,6 @@ Create a function that:
 - Returns the sum of all numbers between them (inclusive)
 """
 def sum_interval(start, end):
-
     total = 0
 
     for num in range(start, end + 1):
